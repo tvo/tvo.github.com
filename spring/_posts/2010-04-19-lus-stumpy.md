@@ -4,9 +4,10 @@ author: Tobi Vollebregt
 layout: post
 ---
 
+* This list will contain the toc (it doesn't matter what you write here)
+{:toc}
 
 # Lua unit script: Stumpy
-
 
 ## Introduction
 
