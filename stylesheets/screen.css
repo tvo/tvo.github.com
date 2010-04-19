@@ -7,6 +7,20 @@ body {
 	border-left: 1px solid #000;
 }
 
+/* headings */
+h2 {
+	border-top: 3px solid #ddd;
+}
+
+div.footer {
+	border-top: 3px solid #ddd;
+	font-size: smaller;
+	font-style: italic;
+	padding: 0.5em;
+	text-align: right;
+}
+
+/* code blocks */
 div.highlight {
 	background: #eee;
 	border: 1px solid #ddd;
