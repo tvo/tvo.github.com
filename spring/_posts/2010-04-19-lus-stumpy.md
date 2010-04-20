@@ -162,7 +162,7 @@ function script.FireWeapon1()
 end
 {% endhighlight %}
 
-Once the weapon is fired (even if **AimWeapon** returns true it's possible the unit does not fire because e.g. friendly units or trees block its line of fire) Spring calls **FireWeapon** for that weapon. Typically, this displays a flare and plays a recoil animation. That is exactly what is done in this example. First, the flare piece is shown and the barrel is positioned -2.4 elmos backward. Then the call to **Sleep** suspends the thread for 150 milliseconds before the flare piece is hidden again. Immediately the barrel starts moving back to it's initial position at a speed of 3 elmos/sec.
+Once the weapon is fired (even if **AimWeapon** returns true it's possible the unit does not fire because e.g. friendly units or trees block its line of fire) Spring calls **FireWeapon** for that weapon. Typically, this displays a flare and plays a recoil animation. That is exactly what is done in this example. First, the flare piece is shown and the barrel is positioned 2.4 elmos backward. Then the call to **Sleep** suspends the thread for 150 milliseconds before the flare piece is hidden again. Immediately the barrel starts moving back to it's initial position at a speed of 3 elmos/sec.
 
 ### What's left?
 
@@ -198,4 +198,4 @@ And the following call-outs:
 * **WaitFor{Turn,Move}**: suspend the thread until an animation is finished
 * **Sleep**: suspend the thread for some milliseconds
 
-And got some idea now how to put basic scripts on the units in your branch new game. Good luck!
+And got some idea now how to put basic scripts on the units in your brand new game. Good luck!
