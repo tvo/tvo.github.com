@@ -4,6 +4,7 @@ body {
 	margin-right: auto;
 	padding-left: 10px;
 	width: 800px;
+	min-height: 600px;
 	border-left: 1px solid #000;
 }
 
@@ -19,7 +20,8 @@ body {
 .maruku_toc ul {
 	padding: 0 0 0 2em;
 }
-.maruku_toc a {
+
+a {
 	color: #000;
 }
 
