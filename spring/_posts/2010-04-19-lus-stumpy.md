@@ -89,7 +89,7 @@ This example makes the weapon of the stumpy fully functional. Here is the comple
 
 {% highlight lua %}
 local base, flare, turret, barrel = piece('base', 'flare', 'turret', 'barrel')
-local SIG_AIM = 1
+local SIG_AIM = {}
 
 function script.AimWeapon1(heading, pitch)
 	Signal(SIG_AIM)
@@ -131,7 +131,7 @@ Here piece numbers are retrieved (using the **piece** function) and assigned to 
 ### Aiming
 
 {% highlight lua %}
-local SIG_AIM = 1
+local SIG_AIM = {}   -- The empty table serves as a unique identifier for aim threads.
 
 function script.AimWeapon1(heading, pitch)
 	Signal(SIG_AIM)          -- Kill all aim threads for this unit
