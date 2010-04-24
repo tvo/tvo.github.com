@@ -91,6 +91,10 @@ This example makes the weapon of the stumpy fully functional. Here is the comple
 local base, flare, turret, barrel = piece('base', 'flare', 'turret', 'barrel')
 local SIG_AIM = 1
 
+function script.Create()
+	Hide(flare)
+end
+
 function script.AimWeapon1(heading, pitch)
 	Signal(SIG_AIM)
 	SetSignalMask(SIG_AIM)
@@ -127,6 +131,16 @@ local base, flare, turret, barrel = piece('base', 'flare', 'turret', 'barrel')
 {% endhighlight %}
 
 Here piece numbers are retrieved (using the **piece** function) and assigned to the variables base, flare, turret and barrel.
+
+### Initialization
+
+{% highlight lua %}
+function script.Create()
+	Hide(flare)
+end
+{% endhighlight %}
+
+The call-in **Create** is called right after the unit is created. Because all pieces are visible by default, we need to hide the flare piece here, as it should only be briefly shown after firing.
 
 ### Aiming
 
@@ -183,6 +197,7 @@ Last but not least these two call-ins define which pieces Spring shall use as 'o
 
 In this tutorial I showed how to script a simple unit using a Lua unit script. You've (hopefully) learned something about the following call-ins:
 
+* **Create**: called right after the unit is created
 * **AimWeapon**: aims the unit's weapon at the target selected by Spring
 * **FireWeapon**: called when the weapon fires
 * **AimFromWeapon**, **QueryWeapon**: defines the origin pieces for the aiming calculations
